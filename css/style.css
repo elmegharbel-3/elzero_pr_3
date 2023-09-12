@@ -1,0 +1,51 @@
+/* Start Golbal Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;;
+}
+ul,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* End Golbal Rules */
+/* Start Variables */
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+}
+/* End Variables */
+/* Start Components */
+
+/* Container */
+.container {
+    background-color: var(--main-color);
+    margin: auto;
+    padding: 0 15px;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* End Components */
+
