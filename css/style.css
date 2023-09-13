@@ -15,18 +15,21 @@ ul,ol {
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration: none;
+}
 /* End Golbal Rules */
 /* Start Variables */
 :root {
     --main-color: #2196F3;
     --main-color-alt: #1787e0;
+    --duration: 0.3s;
 }
 /* End Variables */
 /* Start Components */
 
 /* Container */
 .container {
-    background-color: var(--main-color);
     margin: auto;
     padding: 0 15px;
 }
@@ -45,7 +48,51 @@ ul,ol {
         width: 1170px;
     }
 }
-
-
 /* End Components */
+/* Start Header */
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .container > a {
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 700;
+    display: block;
+    font-size: 26px;
+}
+.header .container ul {
+    display: flex;
+}
+.header .container ul li a {
+    height: 72px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition-duration: var(--duration);
+    position: relative;
+    overflow: hidden;
+}
+.header .container ul li a:hover {
+    color: var(--main-color);
+}
+.header .container ul li a::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: var(--main-color);
+    transition-duration: var(--duration);
+}
+.header .container ul li a:hover::before {
+    left: 0;
+}
+/* End Header */
 
