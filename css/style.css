@@ -726,5 +726,88 @@ a {
     margin-bottom: 25px;
  }
  /* End Team Members */
+/* Start Services */
+.services {
+    background-color: var(--alt-background-color);
+    padding: var(--section-padding) 0;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+}
+.services .container .box {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    padding-top: 30px;
+    text-align: center;
+    counter-increment: services;
+    position: relative;
+    transition: var(--duration);
+}
+.services .container .box:hover {
+    transform: translateY(-10px);
+}
+.services .container .box::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--duration);
+}
+.services .container .box:hover::after {
+    width: 100%;
+}
+.services .container .box i {
+    color: #d5d5d5;
+}
+.services .container .box h3 {
+    font-size: 25px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.services .container .box .foot {
+    padding: 15px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.services .container .box .foot a {
+    color: var(--main-color);
+    text-transform: capitalize;
+    text-align: right;
+    display: block;
+}
+.services .container .box .foot::before {
+    content: '0' counter(services);
+    background-color: var(--main-color);
+    height: 100%;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding-right: 15px;
+}
+.services .container .box .foot::after {
+    content: '';
+    background-color: #d5d5d5;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    transform: skew(-30deg);
+}
 
-
+/* End Services */
