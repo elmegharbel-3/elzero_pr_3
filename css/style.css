@@ -811,3 +811,55 @@ a {
 }
 
 /* End Services */
+.skills {
+    padding: var(--section-padding) 0;
+}
+.skills .container {
+    display: flex;
+    align-items: center;
+}
+.skills .container img {
+    max-width: 100%;
+}
+@media (max-width: 991px) {
+    .skills .container img {
+        display: none;
+    }
+}
+.skills .container .stats {
+    flex: 1;
+}
+.skills .container .stats h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+    position: relative;
+}
+.skills .container .stats .prog {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+.skills .container .stats .prog span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: width 0.5s linear;
+}
+.skills .container .stats .prog span::before {
+    content: attr(data-width);
+    font-size: 12px;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--main-color);
+    position: absolute;
+    right: 0;
+    top: -40px;
+}
+
+
+
