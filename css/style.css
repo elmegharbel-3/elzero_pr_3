@@ -871,9 +871,19 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 991px) {
+    .how-it-works .container {
+        flex-direction: column;
+    }
+}
 .how-it-works .container >  img {
     max-width: 100%;
     margin-right: 100px;
+}
+@media (max-width: 991px) {
+    .how-it-works .container >  img {
+        margin: 0 0 50px;
+    }
 }
 .how-it-works .container .content .box {
     display: flex;
@@ -884,6 +894,15 @@ a {
     border: 2px solid white;
     position: relative;
     z-index: 1;
+}
+@media (max-width: 767px) {
+    .how-it-works .container .content .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .how-it-works .container .content .box .image img {
+        margin: 0 0 30px;
+    }
 }
 .how-it-works .container .content .box::before {
     content: '';
