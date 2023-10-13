@@ -50,7 +50,6 @@ a {
         width: 1170px;
     }
 }
-/* End Components */
 .main-title {
     margin: 0 auto 80px;
     text-transform: uppercase;
@@ -99,6 +98,21 @@ a {
 .main-title:hover::after {
     animation: right-move 0.5s linear forwards;
 }
+.dots {
+    background-image: url(../images/dots.png);
+    width: 204px;
+    height: 186px;
+    position: absolute;
+}
+.dots.up {
+    right: 0;
+    top: 200px;
+}
+.dots.down {
+    left: 0;
+    bottom: 200px;
+}
+/* End Components */
 /* Start Animations */
 @keyframes up-and-down {
     0%,100% {
@@ -955,21 +969,6 @@ a {
     padding: var(--section-padding) 0;
     position: relative;
 }
-.events .dots {
-    background-image: url(../images/dots.png);
-    width: 204px;
-    height: 186px;
-    position: absolute;
-    z-index: -1;
-}
-.dots.up {
-    right: 0;
-    top: 200px;
-}
-.dots.down {
-    left: 0;
-    bottom: 200px;
-}
 .events .container {
     display: flex;
     flex-wrap: wrap;
@@ -1082,22 +1081,23 @@ a {
 .pricing {
     padding: var(--section-padding) 0;
     background-color: var(--alt-background-color);
+    position: relative;
 }
 .pricing .container {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 30px;
+    position: relative;
 }
 .pricing .container .box {
     background-color: white;
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%),
     0 2px 4px 0 rgb(0 0 0 / 12%);
     text-align: center;
-    padding: 30px;
 }
 .pricing .container .box h3 {
     text-transform: capitalize;
-    margin: 0 0 20px;
+    margin: 30px 0 20px;
     font-size: 25px;
     letter-spacing: -1px;
 }
@@ -1112,6 +1112,33 @@ a {
     font-weight: bold;
     color: var(--main-color);
     margin: 20px 0 30px;
+}
+.pricing .container .box ul li {
+    padding: 20px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+.pricing .container .box ul li i {
+    color: var(--main-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+.pricing .container .box a {
+    margin: 50px auto;
+    padding: 15px 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+    width: fit-content;
+    transition: var(--duration);
+}
+.pricing .container .box a:hover {
+    background-color: var(--main-color);
+    color: white;
 }
 /* End Pricing Plans */
 
