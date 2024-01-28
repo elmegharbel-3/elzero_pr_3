@@ -1141,5 +1141,56 @@ a {
     color: white;
 }
 /* End Pricing Plans */
+/* Start Vidoes */
+.videos {
+    padding: var(--section-padding) 0;
+}
+.videos .container .holder {
+    display: flex;
+    border: 1px solid #ddd;
+}
+@media (max-width:991px) {
+    .videos .container .holder {
+        flex-direction: column;
+    }
+}
+.videos .container .holder .vid-list {
+    min-width: 300px;
+}
+.videos .container .holder .vid-list .head {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: capitalize;
+}
+.videos .container .holder .vid-list ul li {
+    padding: 20px;
+    text-transform: capitalize;
+    transition: var(--duration);
+}
+.videos .container .holder .vid-list ul li:hover {
+    background-color: #f4f4f4;
+    color: var(--main-color);
+}
+.videos .container .holder .vid-list ul li span {
+    color: #777;
+    margin-top: 10px;
+    display: block;
+}
+.videos .container .holder .display {
+    background-color: #e2e2e2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.videos .container .holder .display img {
+    max-width: 100%;
+}
+.videos .container .holder .display .info {
+    background-color: white;
+    padding: 20px;
+}
+/* End Videos */
 
 
